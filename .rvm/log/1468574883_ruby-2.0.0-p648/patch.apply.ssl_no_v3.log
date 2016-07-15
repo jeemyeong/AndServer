@@ -1,0 +1,13 @@
+[2016-07-15 09:28:06] __rvm_patch
+__rvm_patch () 
+{ 
+    \patch "$@" || return $?
+}
+current path: /home/ec2-user/.rvm/src/ruby-2.0.0-p648
+GEM_HOME=/home/ec2-user/.rvm/gems/jruby-9.0.5.0
+PATH=/home/ec2-user/.rvm/gems/jruby-9.0.5.0/bin:/home/ec2-user/.rvm/gems/jruby-9.0.5.0@global/bin:/home/ec2-user/.rvm/rubies/jruby-9.0.5.0/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/.rvm/bin:/home/ec2-user/.rvm/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin
+GEM_PATH=/home/ec2-user/.rvm/gems/jruby-9.0.5.0:/home/ec2-user/.rvm/gems/jruby-9.0.5.0@global
+command(8): __rvm_patch -F 25 -p1 -N -f -i /home/ec2-user/.rvm/patches/ruby/ssl_no_v3.patch
+++ patch -F 25 -p1 -N -f -i /home/ec2-user/.rvm/patches/ruby/ssl_no_v3.patch
+patching file ext/openssl/ossl_ssl.c
+Hunk #1 succeeded at 129 (offset 16 lines).

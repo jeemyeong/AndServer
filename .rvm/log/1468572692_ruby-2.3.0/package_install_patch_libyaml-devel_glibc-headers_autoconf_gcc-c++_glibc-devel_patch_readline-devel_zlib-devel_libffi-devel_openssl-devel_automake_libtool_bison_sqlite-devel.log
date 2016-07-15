@@ -1,0 +1,258 @@
+[2016-07-15 08:51:32] requirements_centos_libs_install
+requirements_centos_libs_install () 
+{ 
+    __rvm_try_sudo yum install -y "$@" || return $?
+}
+current path: /home/ec2-user/.rvm/src/rvm
+PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/home/ec2-user/.rvm/bin
+command(16): requirements_centos_libs_install patch libyaml-devel glibc-headers autoconf gcc-c++ glibc-devel patch readline-devel zlib-devel libffi-devel openssl-devel automake libtool bison sqlite-devel
+++ /scripts/functions/requirements/amazon : requirements_centos_libs_install()  31 > __rvm_try_sudo yum install -y patch libyaml-devel glibc-headers autoconf gcc-c++ glibc-devel patch readline-devel zlib-devel libffi-devel openssl-devel automake libtool bison sqlite-devel
+++ /scripts/functions/utility : __rvm_try_sudo()  343 > typeset -a command_to_run
+++ /scripts/functions/utility : __rvm_try_sudo()  344 > typeset sudo_path sbin_path missing_paths
+++ /scripts/functions/utility : __rvm_try_sudo()  345 > command_to_run=("$@")
+++ /scripts/functions/utility : __rvm_try_sudo()  346 > ((  UID == 0  ))
+++ /scripts/functions/utility : __rvm_try_sudo()  347 > case "$rvm_autolibs_flag_number" in
+++ /scripts/functions/utility : __rvm_try_sudo()  362 > is_a_function __rvm_sudo
+++ /scripts/functions/support : is_a_function()  5 > typeset -f __rvm_sudo
+++ /scripts/functions/utility : __rvm_try_sudo()  364 > missing_paths=
+++ /scripts/functions/utility : __rvm_try_sudo()  365 > for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ /scripts/functions/utility : __rvm_try_sudo()  367 > [[ -d /sbin ]]
+++ /scripts/functions/utility : __rvm_try_sudo()  367 > [[ :/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/home/ec2-user/.rvm/bin: != *\:\/\s\b\i\n\:* ]]
+++ /scripts/functions/utility : __rvm_try_sudo()  365 > for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ /scripts/functions/utility : __rvm_try_sudo()  367 > [[ -d /usr/sbin ]]
+++ /scripts/functions/utility : __rvm_try_sudo()  367 > [[ :/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/home/ec2-user/.rvm/bin: != *\:\/\u\s\r\/\s\b\i\n\:* ]]
+++ /scripts/functions/utility : __rvm_try_sudo()  365 > for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ /scripts/functions/utility : __rvm_try_sudo()  367 > [[ -d /usr/local/sbin ]]
+++ /scripts/functions/utility : __rvm_try_sudo()  367 > [[ :/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin:/home/ec2-user/.rvm/bin: != *\:\/\u\s\r\/\l\o\c\a\l\/\s\b\i\n\:* ]]
+++ /scripts/functions/utility : __rvm_try_sudo()  371 > [[ -n '' ]]
+++ /scripts/functions/utility : __rvm_try_sudo()  374 > command_to_run=(__rvm_sudo -p "%p password required for '$*': " "${command_to_run[@]}")
+++ /scripts/functions/utility : __rvm_try_sudo()  381 > __rvm_sudo -p '%p password required for '\''yum install -y patch libyaml-devel glibc-headers autoconf gcc-c++ glibc-devel patch readline-devel zlib-devel libffi-devel openssl-devel automake libtool bison sqlite-devel'\'': ' yum install -y patch libyaml-devel glibc-headers autoconf gcc-c++ glibc-devel patch readline-devel zlib-devel libffi-devel openssl-devel automake libtool bison sqlite-devel
+++ /scripts/functions/support : __rvm_sudo()  357 > command sudo -p '%p password required for '\''yum install -y patch libyaml-devel glibc-headers autoconf gcc-c++ glibc-devel patch readline-devel zlib-devel libffi-devel openssl-devel automake libtool bison sqlite-devel'\'': ' yum install -y patch libyaml-devel glibc-headers autoconf gcc-c++ glibc-devel patch readline-devel zlib-devel libffi-devel openssl-devel automake libtool bison sqlite-devel
+++ /scripts/functions/support : __rvm_sudo()  357 > sudo -p '%p password required for '\''yum install -y patch libyaml-devel glibc-headers autoconf gcc-c++ glibc-devel patch readline-devel zlib-devel libffi-devel openssl-devel automake libtool bison sqlite-devel'\'': ' yum install -y patch libyaml-devel glibc-headers autoconf gcc-c++ glibc-devel patch readline-devel zlib-devel libffi-devel openssl-devel automake libtool bison sqlite-devel
+Loaded plugins: priorities, update-motd, upgrade-helper
+Resolving Dependencies
+--> Running transaction check
+---> Package autoconf.noarch 0:2.69-11.9.amzn1 will be installed
+--> Processing Dependency: m4 >= 1.4.14 for package: autoconf-2.69-11.9.amzn1.noarch
+--> Processing Dependency: perl(Data::Dumper) for package: autoconf-2.69-11.9.amzn1.noarch
+---> Package automake.noarch 0:1.13.4-3.15.amzn1 will be installed
+--> Processing Dependency: perl(TAP::Parser) for package: automake-1.13.4-3.15.amzn1.noarch
+--> Processing Dependency: perl(Thread::Queue) for package: automake-1.13.4-3.15.amzn1.noarch
+---> Package bison.x86_64 0:2.7-4.11.amzn1 will be installed
+---> Package gcc-c++.noarch 0:4.8.3-3.20.amzn1 will be installed
+--> Processing Dependency: gcc48-c++ = 4.8.3 for package: gcc-c++-4.8.3-3.20.amzn1.noarch
+--> Processing Dependency: gcc = 4.8.3-3.20.amzn1 for package: gcc-c++-4.8.3-3.20.amzn1.noarch
+--> Processing Dependency: libstdc++48-devel = 4.8.3 for package: gcc-c++-4.8.3-3.20.amzn1.noarch
+---> Package glibc-devel.x86_64 0:2.17-106.167.amzn1 will be installed
+---> Package glibc-headers.x86_64 0:2.17-106.167.amzn1 will be installed
+--> Processing Dependency: kernel-headers >= 2.2.1 for package: glibc-headers-2.17-106.167.amzn1.x86_64
+--> Processing Dependency: kernel-headers for package: glibc-headers-2.17-106.167.amzn1.x86_64
+---> Package libffi-devel.x86_64 0:3.0.13-11.4.amzn1 will be installed
+---> Package libtool.x86_64 0:2.4.2-20.4.8.3.31.amzn1 will be installed
+---> Package libyaml-devel.x86_64 0:0.1.6-6.7.amzn1 will be installed
+---> Package openssl-devel.x86_64 1:1.0.1k-15.93.amzn1 will be installed
+--> Processing Dependency: krb5-devel(x86-64) for package: 1:openssl-devel-1.0.1k-15.93.amzn1.x86_64
+---> Package patch.x86_64 0:2.7.1-8.9.amzn1 will be installed
+---> Package readline-devel.x86_64 0:6.2-9.14.amzn1 will be installed
+--> Processing Dependency: ncurses-devel for package: readline-devel-6.2-9.14.amzn1.x86_64
+---> Package sqlite-devel.x86_64 0:3.7.17-6.13.amzn1 will be installed
+---> Package zlib-devel.x86_64 0:1.2.8-7.18.amzn1 will be installed
+--> Running transaction check
+---> Package gcc.noarch 0:4.8.3-3.20.amzn1 will be installed
+--> Processing Dependency: gcc48 = 4.8.3 for package: gcc-4.8.3-3.20.amzn1.noarch
+---> Package gcc48-c++.x86_64 0:4.8.3-9.109.amzn1 will be installed
+--> Processing Dependency: libmpfr.so.4()(64bit) for package: gcc48-c++-4.8.3-9.109.amzn1.x86_64
+--> Processing Dependency: libmpc.so.3()(64bit) for package: gcc48-c++-4.8.3-9.109.amzn1.x86_64
+---> Package kernel-headers.x86_64 0:4.4.14-24.50.amzn1 will be installed
+---> Package krb5-devel.x86_64 0:1.13.2-12.40.amzn1 will be installed
+--> Processing Dependency: libverto-devel for package: krb5-devel-1.13.2-12.40.amzn1.x86_64
+--> Processing Dependency: libcom_err-devel for package: krb5-devel-1.13.2-12.40.amzn1.x86_64
+--> Processing Dependency: keyutils-libs-devel for package: krb5-devel-1.13.2-12.40.amzn1.x86_64
+--> Processing Dependency: libselinux-devel for package: krb5-devel-1.13.2-12.40.amzn1.x86_64
+---> Package libstdc++48-devel.x86_64 0:4.8.3-9.109.amzn1 will be installed
+---> Package m4.x86_64 0:1.4.16-9.10.amzn1 will be installed
+---> Package ncurses-devel.x86_64 0:5.7-3.20090208.13.amzn1 will be installed
+---> Package perl-Data-Dumper.x86_64 0:2.145-3.5.amzn1 will be installed
+---> Package perl-Test-Harness.noarch 0:3.28-2.5.amzn1 will be installed
+---> Package perl-Thread-Queue.noarch 0:3.02-2.5.amzn1 will be installed
+--> Running transaction check
+---> Package gcc48.x86_64 0:4.8.3-9.109.amzn1 will be installed
+--> Processing Dependency: cpp48(x86-64) = 4.8.3-9.109.amzn1 for package: gcc48-4.8.3-9.109.amzn1.x86_64
+--> Processing Dependency: libgomp(x86-64) >= 4.8.3-9.109.amzn1 for package: gcc48-4.8.3-9.109.amzn1.x86_64
+---> Package keyutils-libs-devel.x86_64 0:1.5.8-3.12.amzn1 will be installed
+---> Package libcom_err-devel.x86_64 0:1.42.12-4.40.amzn1 will be installed
+---> Package libmpc.x86_64 0:1.0.1-3.3.amzn1 will be installed
+---> Package libselinux-devel.x86_64 0:2.1.10-3.22.amzn1 will be installed
+--> Processing Dependency: libsepol-devel >= 2.1.5-1 for package: libselinux-devel-2.1.10-3.22.amzn1.x86_64
+--> Processing Dependency: pkgconfig(libsepol) for package: libselinux-devel-2.1.10-3.22.amzn1.x86_64
+---> Package libverto-devel.x86_64 0:0.2.5-4.9.amzn1 will be installed
+---> Package mpfr.x86_64 0:3.1.1-4.14.amzn1 will be installed
+--> Running transaction check
+---> Package cpp48.x86_64 0:4.8.3-9.109.amzn1 will be installed
+---> Package libgomp.x86_64 0:4.8.3-9.109.amzn1 will be installed
+---> Package libsepol-devel.x86_64 0:2.1.7-3.12.amzn1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package               Arch     Version                    Repository      Size
+================================================================================
+Installing:
+ autoconf              noarch   2.69-11.9.amzn1            amzn-main      915 k
+ automake              noarch   1.13.4-3.15.amzn1          amzn-main      718 k
+ bison                 x86_64   2.7-4.11.amzn1             amzn-main      645 k
+ gcc-c++               noarch   4.8.3-3.20.amzn1           amzn-main      3.8 k
+ glibc-devel           x86_64   2.17-106.167.amzn1         amzn-main      1.1 M
+ glibc-headers         x86_64   2.17-106.167.amzn1         amzn-main      735 k
+ libffi-devel          x86_64   3.0.13-11.4.amzn1          amzn-main       23 k
+ libtool               x86_64   2.4.2-20.4.8.3.31.amzn1    amzn-main      737 k
+ libyaml-devel         x86_64   0.1.6-6.7.amzn1            amzn-main      124 k
+ openssl-devel         x86_64   1:1.0.1k-15.93.amzn1       amzn-updates   1.5 M
+ patch                 x86_64   2.7.1-8.9.amzn1            amzn-main      113 k
+ readline-devel        x86_64   6.2-9.14.amzn1             amzn-main      141 k
+ sqlite-devel          x86_64   3.7.17-6.13.amzn1          amzn-main      111 k
+ zlib-devel            x86_64   1.2.8-7.18.amzn1           amzn-main       53 k
+Installing for dependencies:
+ cpp48                 x86_64   4.8.3-9.109.amzn1          amzn-main      6.7 M
+ gcc                   noarch   4.8.3-3.20.amzn1           amzn-main      3.9 k
+ gcc48                 x86_64   4.8.3-9.109.amzn1          amzn-main       17 M
+ gcc48-c++             x86_64   4.8.3-9.109.amzn1          amzn-main      8.1 M
+ kernel-headers        x86_64   4.4.14-24.50.amzn1         amzn-updates   1.0 M
+ keyutils-libs-devel   x86_64   1.5.8-3.12.amzn1           amzn-main       37 k
+ krb5-devel            x86_64   1.13.2-12.40.amzn1         amzn-updates   700 k
+ libcom_err-devel      x86_64   1.42.12-4.40.amzn1         amzn-main       35 k
+ libgomp               x86_64   4.8.3-9.109.amzn1          amzn-main      175 k
+ libmpc                x86_64   1.0.1-3.3.amzn1            amzn-main       53 k
+ libselinux-devel      x86_64   2.1.10-3.22.amzn1          amzn-main      157 k
+ libsepol-devel        x86_64   2.1.7-3.12.amzn1           amzn-main       70 k
+ libstdc++48-devel     x86_64   4.8.3-9.109.amzn1          amzn-main      1.7 M
+ libverto-devel        x86_64   0.2.5-4.9.amzn1            amzn-main       11 k
+ m4                    x86_64   1.4.16-9.10.amzn1          amzn-main      263 k
+ mpfr                  x86_64   3.1.1-4.14.amzn1           amzn-main      237 k
+ ncurses-devel         x86_64   5.7-3.20090208.13.amzn1    amzn-main      687 k
+ perl-Data-Dumper      x86_64   2.145-3.5.amzn1            amzn-main       49 k
+ perl-Test-Harness     noarch   3.28-2.5.amzn1             amzn-main      313 k
+ perl-Thread-Queue     noarch   3.02-2.5.amzn1             amzn-main       17 k
+
+Transaction Summary
+================================================================================
+Install  14 Packages (+20 Dependent packages)
+
+Total download size: 44 M
+Installed size: 92 M
+Downloading packages:
+--------------------------------------------------------------------------------
+Total                                               12 MB/s |  44 MB  00:03     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : mpfr-3.1.1-4.14.amzn1.x86_64                                1/34 
+  Installing : libmpc-1.0.1-3.3.amzn1.x86_64                               2/34 
+  Installing : m4-1.4.16-9.10.amzn1.x86_64                                 3/34 
+  Installing : libstdc++48-devel-4.8.3-9.109.amzn1.x86_64                  4/34 
+  Installing : cpp48-4.8.3-9.109.amzn1.x86_64                              5/34 
+  Installing : libcom_err-devel-1.42.12-4.40.amzn1.x86_64                  6/34 
+  Installing : libverto-devel-0.2.5-4.9.amzn1.x86_64                       7/34 
+  Installing : perl-Test-Harness-3.28-2.5.amzn1.noarch                     8/34 
+  Installing : ncurses-devel-5.7-3.20090208.13.amzn1.x86_64                9/34 
+  Installing : perl-Thread-Queue-3.02-2.5.amzn1.noarch                    10/34 
+  Installing : perl-Data-Dumper-2.145-3.5.amzn1.x86_64                    11/34 
+  Installing : autoconf-2.69-11.9.amzn1.noarch                            12/34 
+  Installing : automake-1.13.4-3.15.amzn1.noarch                          13/34 
+  Installing : zlib-devel-1.2.8-7.18.amzn1.x86_64                         14/34 
+  Installing : keyutils-libs-devel-1.5.8-3.12.amzn1.x86_64                15/34 
+  Installing : kernel-headers-4.4.14-24.50.amzn1.x86_64                   16/34 
+  Installing : glibc-headers-2.17-106.167.amzn1.x86_64                    17/34 
+  Installing : glibc-devel-2.17-106.167.amzn1.x86_64                      18/34 
+  Installing : libgomp-4.8.3-9.109.amzn1.x86_64                           19/34 
+  Installing : gcc48-4.8.3-9.109.amzn1.x86_64                             20/34 
+  Installing : gcc-4.8.3-3.20.amzn1.noarch                                21/34 
+  Installing : gcc48-c++-4.8.3-9.109.amzn1.x86_64                         22/34 
+  Installing : libsepol-devel-2.1.7-3.12.amzn1.x86_64                     23/34 
+  Installing : libselinux-devel-2.1.10-3.22.amzn1.x86_64                  24/34 
+  Installing : krb5-devel-1.13.2-12.40.amzn1.x86_64                       25/34 
+  Installing : 1:openssl-devel-1.0.1k-15.93.amzn1.x86_64                  26/34 
+  Installing : gcc-c++-4.8.3-3.20.amzn1.noarch                            27/34 
+  Installing : libtool-2.4.2-20.4.8.3.31.amzn1.x86_64                     28/34 
+  Installing : readline-devel-6.2-9.14.amzn1.x86_64                       29/34 
+  Installing : bison-2.7-4.11.amzn1.x86_64                                30/34 
+  Installing : libyaml-devel-0.1.6-6.7.amzn1.x86_64                       31/34 
+  Installing : libffi-devel-3.0.13-11.4.amzn1.x86_64                      32/34 
+  Installing : sqlite-devel-3.7.17-6.13.amzn1.x86_64                      33/34 
+  Installing : patch-2.7.1-8.9.amzn1.x86_64                               34/34 
+  Verifying  : 1:openssl-devel-1.0.1k-15.93.amzn1.x86_64                   1/34 
+  Verifying  : libstdc++48-devel-4.8.3-9.109.amzn1.x86_64                  2/34 
+  Verifying  : automake-1.13.4-3.15.amzn1.noarch                           3/34 
+  Verifying  : gcc-4.8.3-3.20.amzn1.noarch                                 4/34 
+  Verifying  : readline-devel-6.2-9.14.amzn1.x86_64                        5/34 
+  Verifying  : libsepol-devel-2.1.7-3.12.amzn1.x86_64                      6/34 
+  Verifying  : patch-2.7.1-8.9.amzn1.x86_64                                7/34 
+  Verifying  : mpfr-3.1.1-4.14.amzn1.x86_64                                8/34 
+  Verifying  : libselinux-devel-2.1.10-3.22.amzn1.x86_64                   9/34 
+  Verifying  : libgomp-4.8.3-9.109.amzn1.x86_64                           10/34 
+  Verifying  : kernel-headers-4.4.14-24.50.amzn1.x86_64                   11/34 
+  Verifying  : keyutils-libs-devel-1.5.8-3.12.amzn1.x86_64                12/34 
+  Verifying  : zlib-devel-1.2.8-7.18.amzn1.x86_64                         13/34 
+  Verifying  : glibc-headers-2.17-106.167.amzn1.x86_64                    14/34 
+  Verifying  : perl-Data-Dumper-2.145-3.5.amzn1.x86_64                    15/34 
+  Verifying  : sqlite-devel-3.7.17-6.13.amzn1.x86_64                      16/34 
+  Verifying  : libtool-2.4.2-20.4.8.3.31.amzn1.x86_64                     17/34 
+  Verifying  : perl-Thread-Queue-3.02-2.5.amzn1.noarch                    18/34 
+  Verifying  : bison-2.7-4.11.amzn1.x86_64                                19/34 
+  Verifying  : ncurses-devel-5.7-3.20090208.13.amzn1.x86_64               20/34 
+  Verifying  : gcc-c++-4.8.3-3.20.amzn1.noarch                            21/34 
+  Verifying  : gcc48-c++-4.8.3-9.109.amzn1.x86_64                         22/34 
+  Verifying  : libmpc-1.0.1-3.3.amzn1.x86_64                              23/34 
+  Verifying  : perl-Test-Harness-3.28-2.5.amzn1.noarch                    24/34 
+  Verifying  : libffi-devel-3.0.13-11.4.amzn1.x86_64                      25/34 
+  Verifying  : m4-1.4.16-9.10.amzn1.x86_64                                26/34 
+  Verifying  : cpp48-4.8.3-9.109.amzn1.x86_64                             27/34 
+  Verifying  : libverto-devel-0.2.5-4.9.amzn1.x86_64                      28/34 
+  Verifying  : krb5-devel-1.13.2-12.40.amzn1.x86_64                       29/34 
+  Verifying  : libcom_err-devel-1.42.12-4.40.amzn1.x86_64                 30/34 
+  Verifying  : autoconf-2.69-11.9.amzn1.noarch                            31/34 
+  Verifying  : libyaml-devel-0.1.6-6.7.amzn1.x86_64                       32/34 
+  Verifying  : glibc-devel-2.17-106.167.amzn1.x86_64                      33/34 
+  Verifying  : gcc48-4.8.3-9.109.amzn1.x86_64                             34/34 
+
+Installed:
+  autoconf.noarch 0:2.69-11.9.amzn1                                             
+  automake.noarch 0:1.13.4-3.15.amzn1                                           
+  bison.x86_64 0:2.7-4.11.amzn1                                                 
+  gcc-c++.noarch 0:4.8.3-3.20.amzn1                                             
+  glibc-devel.x86_64 0:2.17-106.167.amzn1                                       
+  glibc-headers.x86_64 0:2.17-106.167.amzn1                                     
+  libffi-devel.x86_64 0:3.0.13-11.4.amzn1                                       
+  libtool.x86_64 0:2.4.2-20.4.8.3.31.amzn1                                      
+  libyaml-devel.x86_64 0:0.1.6-6.7.amzn1                                        
+  openssl-devel.x86_64 1:1.0.1k-15.93.amzn1                                     
+  patch.x86_64 0:2.7.1-8.9.amzn1                                                
+  readline-devel.x86_64 0:6.2-9.14.amzn1                                        
+  sqlite-devel.x86_64 0:3.7.17-6.13.amzn1                                       
+  zlib-devel.x86_64 0:1.2.8-7.18.amzn1                                          
+
+Dependency Installed:
+  cpp48.x86_64 0:4.8.3-9.109.amzn1                                              
+  gcc.noarch 0:4.8.3-3.20.amzn1                                                 
+  gcc48.x86_64 0:4.8.3-9.109.amzn1                                              
+  gcc48-c++.x86_64 0:4.8.3-9.109.amzn1                                          
+  kernel-headers.x86_64 0:4.4.14-24.50.amzn1                                    
+  keyutils-libs-devel.x86_64 0:1.5.8-3.12.amzn1                                 
+  krb5-devel.x86_64 0:1.13.2-12.40.amzn1                                        
+  libcom_err-devel.x86_64 0:1.42.12-4.40.amzn1                                  
+  libgomp.x86_64 0:4.8.3-9.109.amzn1                                            
+  libmpc.x86_64 0:1.0.1-3.3.amzn1                                               
+  libselinux-devel.x86_64 0:2.1.10-3.22.amzn1                                   
+  libsepol-devel.x86_64 0:2.1.7-3.12.amzn1                                      
+  libstdc++48-devel.x86_64 0:4.8.3-9.109.amzn1                                  
+  libverto-devel.x86_64 0:0.2.5-4.9.amzn1                                       
+  m4.x86_64 0:1.4.16-9.10.amzn1                                                 
+  mpfr.x86_64 0:3.1.1-4.14.amzn1                                                
+  ncurses-devel.x86_64 0:5.7-3.20090208.13.amzn1                                
+  perl-Data-Dumper.x86_64 0:2.145-3.5.amzn1                                     
+  perl-Test-Harness.noarch 0:3.28-2.5.amzn1                                     
+  perl-Thread-Queue.noarch 0:3.02-2.5.amzn1                                     
+
+Complete!

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"config_file:ETI"GPhusionPassenger::PlatformInfo::ApacheDetector::Result#config_file;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"ETtis may be nil. It depends on whether 'apache2ctl -V' succeeds.;T:
+@fileI"Ksrc/ruby_supportlib/phusion_passenger/platform_info/apache_detector.rb;T:0@omit_headings_from_table_of_contents_below0F@I";PhusionPassenger::PlatformInfo::ApacheDetector::Result;TcRDoc::NormalClass0

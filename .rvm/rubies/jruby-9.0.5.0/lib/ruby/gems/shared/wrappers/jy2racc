@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if
+  [[ -s "/home/ec2-user/.rvm/gems/jruby-9.0.5.0@global/environment" ]]
+then
+  source "/home/ec2-user/.rvm/gems/jruby-9.0.5.0@global/environment"
+  exec y2racc "$@"
+else
+  echo "ERROR: Missing RVM environment file: '/home/ec2-user/.rvm/gems/jruby-9.0.5.0@global/environment'" >&2
+  exit 1
+fi

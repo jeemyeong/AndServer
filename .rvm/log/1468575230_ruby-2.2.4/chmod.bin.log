@@ -1,0 +1,27 @@
+[2016-07-15 09:37:06] __rvm_set_executable
+__rvm_set_executable () 
+{ 
+    for __file in "$@";
+    do
+        [[ -x "${__file}" ]] || chmod +x "${__file}";
+    done
+}
+current path: /home/ec2-user/.rvm/src/ruby-2.2.4
+GEM_HOME=/home/ec2-user/.rvm/gems/ruby-2.0.0-p648
+PATH=/home/ec2-user/.rvm/gems/ruby-2.0.0-p648/bin:/home/ec2-user/.rvm/gems/ruby-2.0.0-p648@global/bin:/home/ec2-user/.rvm/rubies/ruby-2.0.0-p648/bin:/home/ec2-user/.rvm/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/aws/bin:/home/ec2-user/.local/bin:/home/ec2-user/bin
+GEM_PATH=/home/ec2-user/.rvm/gems/ruby-2.0.0-p648:/home/ec2-user/.rvm/gems/ruby-2.0.0-p648@global
+command(8): __rvm_set_executable /home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/erb /home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/gem /home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/irb /home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/rake /home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/rdoc /home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/ri /home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/ruby
+++ for __file in '"$@"'
+++ [[ -x /home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/erb ]]
+++ for __file in '"$@"'
+++ [[ -x /home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/gem ]]
+++ for __file in '"$@"'
+++ [[ -x /home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/irb ]]
+++ for __file in '"$@"'
+++ [[ -x /home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/rake ]]
+++ for __file in '"$@"'
+++ [[ -x /home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/rdoc ]]
+++ for __file in '"$@"'
+++ [[ -x /home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/ri ]]
+++ for __file in '"$@"'
+++ [[ -x /home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/ruby ]]

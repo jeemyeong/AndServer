@@ -1,0 +1,12 @@
+/home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/ruby -r ./siteconf20160715-6765-lufev4.rb extconf.rb
+rake 10.4.2
+rdoc 4.2.0
+
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install
+make: Nothing to be done for `install'.

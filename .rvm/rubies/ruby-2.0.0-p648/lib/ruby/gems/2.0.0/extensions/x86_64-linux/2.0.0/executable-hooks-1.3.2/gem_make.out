@@ -1,0 +1,13 @@
+/home/ec2-user/.rvm/rubies/ruby-2.0.0-p648/bin/ruby -r ./siteconf20160715-26047-totd8q.rb extconf.rb
+rake 0.9.6
+rdoc 4.0.0
+test-unit 2.0.0.0
+
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+make "DESTDIR=" install
+make: Nothing to be done for `install'.

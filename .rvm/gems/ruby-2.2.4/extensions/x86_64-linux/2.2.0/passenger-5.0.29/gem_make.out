@@ -1,0 +1,16 @@
+/home/ec2-user/.rvm/rubies/ruby-2.2.4/bin/ruby -r ./siteconf20160715-19625-lvyrqf.rb extconf.rb
+Attempting to download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.0.29/rubyext-ruby-2.2.4-x86_64-linux.tar.gz into /home/ec2-user/.rvm/gems/ruby-2.2.4/gems/passenger-5.0.29/download_cache
+*** Could not download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.0.29/rubyext-ruby-2.2.4-x86_64-linux.tar.gz: The requested URL returned error: 404 Not Found
+Attempting to download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.0.29/rubyext-ruby-2.2.4-x86_64-linux.tar.gz into /home/ec2-user/.rvm/gems/ruby-2.2.4/gems/passenger-5.0.29/download_cache
+*** Could not download https://s3.amazonaws.com/phusion-passenger/binaries/passenger/by_release/5.0.29/rubyext-ruby-2.2.4-x86_64-linux.tar.gz: The requested URL returned error: 403 Forbidden
+Attempting to download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.0.29/nginx-1.10.1-x86_64-linux.tar.gz into /home/ec2-user/.rvm/gems/ruby-2.2.4/gems/passenger-5.0.29/download_cache
+Attempting to download https://oss-binaries.phusionpassenger.com/binaries/passenger/by_release/5.0.29/agent-x86_64-linux.tar.gz into /home/ec2-user/.rvm/gems/ruby-2.2.4/gems/passenger-5.0.29/download_cache
+
+make "DESTDIR=" clean
+true
+
+make "DESTDIR="
+true
+
+make "DESTDIR=" install
+true
